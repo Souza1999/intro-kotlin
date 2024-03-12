@@ -1,4 +1,4 @@
-package br.ifpb.pdm
+Spackage br.ifpb.pdm
 
 fun main() {
     val repositorioAnimal = RepositorioAnimal()
