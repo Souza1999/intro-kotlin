@@ -11,12 +11,18 @@ repositories {
 
 dependencies {
     testImplementation("org.jetbrains.kotlin:kotlin-test")
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.0")
 }
 
 tasks.test {
     useJUnitPlatform()
 }
+
+// Excluir arquivos .ipynb da compilação
+tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
+    exclude("**/*.ipynb")
+}
+
 kotlin {
-    jvmToolchain(19)
+    jvmToolchain(21)
 }
